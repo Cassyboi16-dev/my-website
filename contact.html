@@ -1,11 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Genesys Techhub Task 2 | Upskill Cohort 26.1</title>
+  </head>
+  <body>
+    <main>
+      <!-- this contains the navigation links to other pages -->
+      <header>
+        <!-- this section contains the link to other pages -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- This is the contact page of the website. -->
+      <h1>Contact Us</h1>
+      <p>
+        If you have any questions or inquiries, please feel free to contact us
+        using the form below:
+      </p>
+
+      <!-- This is a contact form that allows users to submit their information and message -->
+      <form action="submit_form.php" method="post">
+        <label for="fullname">Full Name:</label><br />
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Your full name"
+          required
+        /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Choose a password"
+          required
+        /><br /><br />
+
+        <fieldset>
+          <legend>Gender</legend>
+          <input
+            type="radio"
+            id="gender_m"
+            name="gender"
+            value="male"
+            required
+          />
+          <label for="gender_m">Male</label>
+          <input type="radio" id="gender_f" name="gender" value="female" />
+          <label for="gender_f">Female</label>
+          <input type="radio" id="gender_o" name="gender" value="other" />
+          <label for="gender_o">Other</label>
+        </fieldset>
+        <br />
+
+        <fieldset>
+          <legend>Hobbies</legend>
+          <input
+            type="checkbox"
+            id="hobby_reading"
+            name="hobbies[]"
+            value="reading"
+          />
+          <label for="hobby_reading">Reading</label>
+          <input
+            type="checkbox"
+            id="hobby_travel"
+            name="hobbies[]"
+            value="traveling"
+          />
+          <label for="hobby_travel">Traveling</label>
+          <input
+            type="checkbox"
+            id="hobby_coding"
+            name="hobbies[]"
+            value="coding"
+          />
+          <label for="hobby_coding">Coding</label>
+          <input
+            type="checkbox"
+            id="hobby_sports"
+            name="hobbies[]"
+            value="sports"
+          />
+          <label for="hobby_sports">Sports</label>
+        </fieldset>
+        <br />
+
+        <label for="subject">Subject:</label><br />
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Choose a subject</option>
+          <option value="general">General Inquiry</option>
+          <option value="support">Support</option>
+          <option value="sales">Sales</option>
+          <option value="feedback">Feedback</option></select
+        ><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          cols="50"
+          placeholder="Write your message here..."
+          required
+        ></textarea
+        ><br /><br />
+
+        <input type="submit" name="submit" value="Send Message" />
+      </form>
+    </main>
+  </body>
 </html>
